@@ -1,4 +1,4 @@
-export const formatSeconds = (seconds: number) => {
+export const formatSecondsToReadableTime = (seconds: number) => {
   if (seconds < 60) {
     return `${seconds}s`
   }
