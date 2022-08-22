@@ -1,0 +1,8 @@
+export { IconRun } from "@apollo/space-kit/icons/IconRun"
+export { IconView } from "@apollo/space-kit/icons/IconView"
+export { IconTime } from "@apollo/space-kit/icons/IconTime"
+export { IconBook } from "@apollo/space-kit/icons/IconBook"
+export { IconYoutube } from "@apollo/space-kit/icons/IconYoutube"
+export { IconArrowRight } from "@apollo/space-kit/icons/IconArrowRight"
+export { IconDoubleArrowRight } from "@apollo/space-kit/icons/IconDoubleArrowRight"
+export { ApolloIcon } from "@apollo/space-kit/icons/ApolloIcon"
