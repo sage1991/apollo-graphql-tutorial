@@ -5,9 +5,9 @@ export namespace Palette {
   export const secondary = SKColors.teal.base
   export const accent = SKColors.pink.base
   export const background = SKColors.silver.base
-  export const grey = SKColors.silver.darker
   export const text = SKColors.black.base
   export const textSecondary = SKColors.grey.darker
+
   export const {
     silver,
     black,
@@ -22,6 +22,7 @@ export namespace Palette {
     purple,
     yellow,
     white,
-    blilet
+    blilet,
+    grey
   } = SKColors
 }
