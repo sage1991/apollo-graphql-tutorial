@@ -1,5 +1,11 @@
 import { FC } from "react"
 
-export const App: FC = () => {
-  return <div></div>
-}
+import { GlobalStyle } from "./styles"
+import { Navigation } from "./navigations"
+
+export const App: FC = () => (
+  <>
+    <GlobalStyle />
+    <Navigation />
+  </>
+)
