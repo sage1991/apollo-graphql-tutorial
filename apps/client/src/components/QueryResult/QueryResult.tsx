@@ -12,8 +12,9 @@ interface Props<T> {
 
 export const QueryResult = <T,>({ loading, error, data, children }: Props<T>) => {
   if (error) {
-    return <p>ERROR: ${error.message}</p>
+    return <p>ERROR: {error.message}</p>
   }
+
   if (loading) {
     return (
       <SpinnerContainer>
