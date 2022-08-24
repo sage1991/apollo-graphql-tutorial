@@ -24,7 +24,7 @@ interface Props {
 }
 
 export const TrackDetail: FC<Props> = ({ track }) => {
-  const { title, description, thumbnail, author, length, modulesCount, modules, numberOfViews } =
+  const { title, description, thumbnail, author, length, moduleCount, modules, numberOfViews } =
     track
 
   return (
@@ -43,7 +43,7 @@ export const TrackDetail: FC<Props> = ({ track }) => {
             </IconAndLabel>
             <IconAndLabel>
               <IconBook width="14px" height="14px" />
-              <div>{modulesCount} modules</div>
+              <div>{moduleCount} modules</div>
             </IconAndLabel>
             <IconAndLabel>
               <IconTime width="14px" />
