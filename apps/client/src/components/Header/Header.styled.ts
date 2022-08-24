@@ -13,6 +13,9 @@ export const HeaderRoot = styled("div")`
   padding: 5px 30px;
   min-height: 80px;
   background-color: #ffffff;
+`
+
+export const HeaderContainer = styled("div")`
   width: ${Size.regularPage}px;
 `
 
