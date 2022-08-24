@@ -12,13 +12,13 @@ export const CardContainer = styled("div")`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 380;
-  margin: 10;
+  height: 380px;
+  margin: 10px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
 
-  &:hover: {
+  &:hover {
     background-color: ${Palette.pink.lightest};
   }
 
@@ -52,7 +52,7 @@ export const CardTitle = styled("h3")`
 `
 
 export const CardImageContainer = styled("div")`
-  height: 220;
+  height: 220px;
   position: relative;
 
   &::after {
@@ -74,7 +74,7 @@ export const CardImage = styled("img")`
 `
 
 export const CardBody = styled("div")`
-  padding: 18;
+  padding: 18px;
   flex: 1;
   display: flex;
   color: ${Palette.textSecondary};
@@ -88,9 +88,9 @@ export const CardFooter = styled("div")`
 `
 
 export const AuthorImage = styled("img")`
-  height: 30;
-  width: 30;
-  margin-right: 8;
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
   border-radius: 50%;
   object-fit: cover;
 `
