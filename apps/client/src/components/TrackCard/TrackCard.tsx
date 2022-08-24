@@ -1,6 +1,7 @@
 import { FC } from "react"
 
 import { formatSecondsToReadableTime } from "../../utils"
+import { Track } from "../../queries"
 
 import {
   CardContainer,
@@ -17,11 +18,11 @@ import {
 } from "./TrackCard.styled"
 
 interface Props {
-  track: any
+  track: Track
 }
 
 export const TrackCard: FC<Props> = ({ track }) => {
-  const { title, thumbnail, author, length, modulesCount } = track
+  const { title, thumbnail, author, length, moduleCount } = track
 
   return (
     <CardContainer>
@@ -36,7 +37,7 @@ export const TrackCard: FC<Props> = ({ track }) => {
             <AuthorAndTrack>
               <AuthorName>{author.name}</AuthorName>
               <TrackLength>
-                {modulesCount} modules - {formatSecondsToReadableTime(length)}
+                {moduleCount} modules - {formatSecondsToReadableTime(length ?? 0)}
               </TrackLength>
             </AuthorAndTrack>
           </CardFooter>
