@@ -1,16 +1,16 @@
-import { FC, ReactNode } from "react"
+import { ReactNode } from "react"
 import { LoadingSpinner } from "@apollo/space-kit/Loaders/LoadingSpinner"
 
 import { SpinnerContainer } from "./QueryResult.styled"
 
-interface Props {
+interface Props<T> {
   loading: boolean
   error: any
-  data: any
-  children?: ReactNode
+  data?: T
+  children: (data: T) => ReactNode
 }
 
-export const QueryResult: FC<Props> = ({ loading, error, data, children }) => {
+export const QueryResult = <T,>({ loading, error, data, children }: Props<T>) => {
   if (error) {
     return <p>ERROR: ${error.message}</p>
   }
@@ -26,5 +26,5 @@ export const QueryResult: FC<Props> = ({ loading, error, data, children }) => {
     return <p>Nothing to show...</p>
   }
 
-  return <></>
+  return <>{children(data)}</>
 }
