@@ -1,15 +1,14 @@
 import { StrictMode } from "react"
-import { createRoot } from "react-dom/client"
+import { render } from "react-dom"
 
 import { App } from "./App"
 import { reportWebVitals } from "./reportWebVitals"
 
-const root = createRoot(document.querySelector<HTMLDivElement>("#root")!)
-
-root.render(
+render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
+  document.querySelector<HTMLDivElement>("#root")
 )
 
 // If you want to start measuring performance in your app, pass a function

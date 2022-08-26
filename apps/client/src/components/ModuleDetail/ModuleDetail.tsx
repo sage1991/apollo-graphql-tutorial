@@ -21,6 +21,7 @@ export const ModuleDetail: FC<Props> = ({ track, module }) => {
       <TopSection>
         <TopContainer viewportWith={width}>
           <PlayerContainer>
+            {/* @ts-expect-error */}
             <ReactPlayer url={videoUrl} width="100%" height="100%" />
           </PlayerContainer>
           <ModuleNav module={module} track={track} />

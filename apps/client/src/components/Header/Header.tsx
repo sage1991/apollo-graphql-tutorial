@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react"
+import { FC } from "react"
 
 import {
   HeaderContainer,
@@ -13,7 +13,7 @@ import {
 
 import { SpaceCat } from "../../assets"
 
-export const Header: FC<PropsWithChildren> = ({ children }) => (
+export const Header: FC = ({ children }) => (
   <HeaderRoot>
     <HeaderContainer>
       <HomeButtonContainer>

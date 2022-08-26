@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from "react"
+import { FC } from "react"
 
 import { ContentSectionRoot } from "./ContentSection.styled"
 
-export const ContentSection: FC<PropsWithChildren> = ({ children }) => (
+export const ContentSection: FC = ({ children }) => (
   <ContentSectionRoot>{children}</ContentSectionRoot>
 )
