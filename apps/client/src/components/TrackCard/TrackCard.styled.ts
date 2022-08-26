@@ -1,8 +1,9 @@
 import styled from "@emotion/styled"
+import { Link } from "@reach/router"
 
 import { mq, Palette } from "../../styles"
 
-export const CardContainer = styled("div")`
+export const CardContainer = styled(Link)`
   border-radius: 6px;
   color: ${Palette.text};
   background-size: cover;

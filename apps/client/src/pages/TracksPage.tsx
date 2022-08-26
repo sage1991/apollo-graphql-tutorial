@@ -2,13 +2,12 @@ import { FC } from "react"
 import { RouteComponentProps } from "@reach/router"
 
 import { Layout, QueryResult, TrackCard } from "../components"
-import { useTracksQuery } from "../queries"
+import { useTrackListQuery } from "../queries"
 
 interface Props extends RouteComponentProps {}
 
 export const TracksPage: FC<Props> = () => {
-  const { data, loading, error } = useTracksQuery()
-
+  const { data, loading, error } = useTrackListQuery()
   return (
     <Layout grid>
       <QueryResult error={error} loading={loading} data={data}>

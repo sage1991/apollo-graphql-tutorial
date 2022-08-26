@@ -22,10 +22,10 @@ interface Props {
 }
 
 export const TrackCard: FC<Props> = ({ track }) => {
-  const { title, thumbnail, author, length, moduleCount } = track
+  const { title, thumbnail, author, length, moduleCount, id } = track
 
   return (
-    <CardContainer>
+    <CardContainer to={`/track/${id}`}>
       <CardContent>
         <CardImageContainer>
           <CardImage src={thumbnail} alt={title} />

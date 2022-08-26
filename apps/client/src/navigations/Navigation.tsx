@@ -1,10 +1,11 @@
-import { FC, Fragment } from "react"
+import { FC } from "react"
 import { Router } from "@reach/router"
 
-import { TracksPage } from "../pages"
+import { TrackPage, TracksPage } from "../pages"
 
 export const Navigation: FC = () => (
-  <Router primary={false} component={Fragment}>
+  <Router>
     <TracksPage path="/" />
+    <TrackPage path="/track/:trackId" />
   </Router>
 )
