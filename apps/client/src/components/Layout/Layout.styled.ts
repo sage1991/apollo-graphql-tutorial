@@ -18,5 +18,6 @@ export const PageRoot = styled("div")<Props>(
   width: 100%;
   padding: ${fullwidth ? 0 : `${Size.unit * 2}px`};
   padding-bottom: ${Size.unit * 5}px;
+  margin: auto;
 `
 )

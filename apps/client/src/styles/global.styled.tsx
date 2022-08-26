@@ -19,10 +19,10 @@ export const GlobalStyle: FC = () => (
         color: ${Palette.text};
       }
 
-      #root {
+      #router {
         display: flex;
         flex-direction: column;
-        min-height: 100%;
+        min-height: 100vh;
         background-image: url("/space_kitty_pattern.png");
       }
 
