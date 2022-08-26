@@ -1,5 +1,3 @@
-import { GraphQLResolveInfo } from "graphql"
-
 import { Repository, TrackModel } from "../repository"
 
 interface Context {
@@ -8,18 +6,19 @@ interface Context {
 
 export const resolvers = {
   Query: {
-    tracks(parent: undefined, args: undefined, { dataSources }: Context, info: GraphQLResolveInfo) {
+    tracks(_: undefined, __: undefined, { dataSources }: Context) {
       return dataSources.track.findTracks()
+    },
+    track(parent: undefined, { id }: { id: string }, { dataSources }: Context) {
+      return dataSources.track.findTrackById(id)
     }
   },
   Track: {
-    author(
-      { authorId }: TrackModel,
-      args: undefined,
-      { dataSources }: Context,
-      info: GraphQLResolveInfo
-    ) {
+    author({ authorId }: TrackModel, _: undefined, { dataSources }: Context) {
       return dataSources.author.findAuthorById(authorId)
+    },
+    modules({ id }: TrackModel, _: undefined, { dataSources }: Context) {
+      return dataSources.module.findModulesByTrackId(id)
     }
   }
 }

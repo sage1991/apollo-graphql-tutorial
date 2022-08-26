@@ -1,12 +1,12 @@
 import { ApolloServer } from "apollo-server"
 
-import { typeDefs } from "./schema"
+import { authorTypeDefs, moduleTypeDefs, rootTypeDefs, trackTypeDefs } from "./schema"
 import { resolvers } from "./resolvers"
 import { repository } from "./repository"
 
 const main = async () => {
   const server = new ApolloServer({
-    typeDefs,
+    typeDefs: [rootTypeDefs, authorTypeDefs, moduleTypeDefs, trackTypeDefs],
     resolvers,
     dataSources: () => repository
   })
