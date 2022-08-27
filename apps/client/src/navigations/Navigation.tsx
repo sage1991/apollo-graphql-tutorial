@@ -1,11 +1,11 @@
 import { FC } from "react"
 import { Router } from "@reach/router"
 
-import { TrackPage, TracksPage } from "../pages"
+import { TrackPage, TrackListPage } from "../pages"
 
 export const Navigation: FC = () => (
   <Router id="router">
-    <TracksPage path="/" />
+    <TrackListPage path="/" />
     <TrackPage path="/track/:trackId" />
   </Router>
 )

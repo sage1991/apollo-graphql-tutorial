@@ -1,2 +1,2 @@
-export * from "./TracksPage"
+export * from "./TrackListPage"
 export * from "./TrackPage"

@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import { formatSecondsToReadableTime } from "../../utils"
-import { Track } from "../../queries"
+import { Track, useIncrementTrackViewsMutation } from "../../queries"
 
 import {
   CardContainer,
@@ -23,9 +23,10 @@ interface Props {
 
 export const TrackCard: FC<Props> = ({ track }) => {
   const { title, thumbnail, author, length, moduleCount, id } = track
+  const [incrementTrackViews] = useIncrementTrackViewsMutation(id)
 
   return (
-    <CardContainer to={`/track/${id}`}>
+    <CardContainer to={`/track/${id}`} onClick={incrementTrackViews as () => void}>
       <CardContent>
         <CardImageContainer>
           <CardImage src={thumbnail} alt={title} />

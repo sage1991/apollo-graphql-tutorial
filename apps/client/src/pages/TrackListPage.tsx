@@ -6,7 +6,7 @@ import { useTrackListQuery } from "../queries"
 
 interface Props extends RouteComponentProps {}
 
-export const TracksPage: FC<Props> = () => {
+export const TrackListPage: FC<Props> = () => {
   const { data, loading, error } = useTrackListQuery()
   return (
     <Layout grid>
